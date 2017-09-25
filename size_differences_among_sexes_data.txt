@@ -1,0 +1,2 @@
+SELECT sex, hindfoot_length, weight
+FROM surveys
