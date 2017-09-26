@@ -1,0 +1,4 @@
+SELECT surveys.year, surveys.month, surveys.day, species.genus, species.species, plots.plot_type, surveys.plot_id
+FROM surveys
+JOIN species ON surveys.species_id = species.species_id
+JOIN plots ON surveys.plot_id = plots.plot_id;
