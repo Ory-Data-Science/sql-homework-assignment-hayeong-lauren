@@ -1,0 +1,6 @@
+SELECT species.genus, species.species, species.taxa
+FROM species
+JOIN plots ON plots.plot_id = surveys.plot_id
+JOIN surveys ON species.species_id = surveys.species_id
+WHERE taxa != 'Rodent' AND plot_type = 'Control'
+GROUP by species.species_id;
