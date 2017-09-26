@@ -1,0 +1,4 @@
+SELECT species_id,  year, COUNT(*) AS total_abundance,  ROUND(sum(weight/1000.),3) AS total_biomass_kg
+FROM surveys
+GROUP by weight
+ORDER BY year ASC;
