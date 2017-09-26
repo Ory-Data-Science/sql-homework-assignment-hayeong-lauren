@@ -1,0 +1,5 @@
+SELECT surveys.year, species.genus, surveys.species_id, surveys.weight, plots.plot_type
+FROM species
+JOIN plots ON plots.plot_id = surveys.plot_id
+JOIN surveys ON species.species_id = surveys.species_id
+WHERE  (plot_type = 'Long-term Krat Exclosure' OR plot_type= "Control") AND (taxa = 'Rodent' AND species.species_id !='species' AND weight >  0);
