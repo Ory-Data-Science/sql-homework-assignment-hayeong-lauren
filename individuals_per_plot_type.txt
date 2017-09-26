@@ -1,0 +1,6 @@
+SELECT plot_type, COUNT (*) AS individuals_sampled 
+FROM surveys 
+JOIN plots ON surveys.plot_id = plots.plot_id
+JOIN species ON surveys.species_id = species.species_id
+WHERE species.taxa = 'Rodent'
+GROUP BY plot_type;
