@@ -1,0 +1,4 @@
+SELECT DISTINCT year, month, day
+FROM surveys
+WHERE species_id = 'DS'
+ORDER BY year, month, day
